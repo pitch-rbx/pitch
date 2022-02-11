@@ -1,0 +1,13 @@
+{
+	"name": "Pitch (plugin)",
+	"tree": {
+	  "$className": "DataModel",
+
+	  "ServerStorage": {
+		"$className": "ServerStorage",
+		"Pitch": {
+		  "$path": "src-plugin"
+		}
+	  }
+	}
+  }
