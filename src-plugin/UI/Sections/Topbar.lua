@@ -1,4 +1,4 @@
-local Package = script.Parent.Parent
+local Package = script.Parent.Parent.Parent
 local Fusion  = require(Package.Libraries.Fusion)
 local New = Fusion.New
 local Hydrate = Fusion.Hydrate
@@ -8,7 +8,7 @@ local Ref = Fusion.Ref
 local Value = Fusion.Value
 
 local Theme = require(Package.UI.Theme)
-local Button = require(Package.UI.Button)
+local Button = require(Package.UI.Components.Button)
 
 local function Topbar(props)
 	return New "Frame" {

@@ -10,9 +10,9 @@ return function(plugin)
 	local Computed = Fusion.Computed
 
 	local Theme = require(Package.UI.Theme)
-	local Topbar = require(Package.UI.Topbar)
-	local PluginList = require(Package.UI.PluginList)
-	local Modal = require(Package.UI.Modal)
+	local Topbar = require(Package.UI.Sections.Topbar)
+	local PluginList = require(Package.UI.Sections.PluginList)
+	local Modal = require(Package.UI.Components.Modal)
 
 	local function UIMain()
 		local refManagePlugins = Value()
@@ -112,14 +112,9 @@ return function(plugin)
 					},
 					PluginList {
 						Contents = pluginSet,
-						OpenPluginSettings = function(pluginToInspect)
-							currentModal:set(
-								Modal {}
-							)
-						end,
 					},
 					Modal {
-
+						Visible = Value(false)
 					}
 				}
 			}

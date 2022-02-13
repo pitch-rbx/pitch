@@ -1,4 +1,4 @@
-local Package = script.Parent.Parent
+local Package = script.Parent.Parent.Parent
 local Fusion  = require(Package.Libraries.Fusion)
 local New = Fusion.New
 local Hydrate = Fusion.Hydrate
@@ -10,7 +10,7 @@ local Computed = Fusion.Computed
 local ComputedPairs = Fusion.ComputedPairs
 
 local Theme = require(Package.UI.Theme)
-local Switch = require(Package.UI.Switch)
+local Switch = require(Package.UI.Components.Switch)
 
 local function UpdateNotice(props)
 	return New "TextLabel" {
@@ -43,8 +43,7 @@ end
 local function PluginListEntry(props)
 	return New "Frame" {
 		Name = Computed(function()
-			return (if props.Info.Enabled:get() then "a" else "z")
-				.. (if props.Info.UpdateAvailable:get() then "a" else "z")
+			return (if props.Info.UpdateAvailable:get() then "a" else "z")
 				.. props.Info.Title
 		end),
 

@@ -20,6 +20,10 @@ local COLOURS = {
 		light = Color3.fromHSV(0, 0, 0.8),
 		dark = Color3.fromHSV(0, 0, 0.3)
 	},
+	smoke = {
+		light = Color3.fromHSV(0, 0, 0.85),
+		dark = Color3.fromHSV(0, 0, 0.05)
+	},
 
 	accent = {
 		light = Color3.fromHSV(0.3972, 0.8, 0.66),
